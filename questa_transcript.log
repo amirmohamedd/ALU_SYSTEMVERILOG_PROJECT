@@ -1,0 +1,598 @@
+# 
+# if {[file exists work]} {
+#     vdel -lib work -all
+# }
+# 
+# if {[file exists alu_coverage.ucdb]} {
+#     file delete alu_coverage.ucdb
+# }
+# 
+# if {[file exists alu_coverage_report.txt]} {
+#     file delete alu_coverage_report.txt
+# }
+# 
+# vlib work
+# vmap work work
+# QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
+# vmap work work 
+# Modifying E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf
+# 
+# vlog -sv +cover=bcesft alu_if.sv alu_pkg.sv alu.sv tb_top.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 20:51:59 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+cover=bcesft" alu_if.sv alu_pkg.sv alu.sv tb_top.sv 
+# -- Compiling interface alu_if
+# -- Compiling package alu_pkg
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(5)
+# ** at alu_transaction.sv(29): near "begin": syntax error, unexpected begin.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(3): near "gen2drv": syntax error, unexpected IDENTIFIER, expecting '\''.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(11): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(12): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(29): (vlog-2730) Undefined variable: 'tr'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(31): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(32): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(33): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(34): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(35): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(36): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(37): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(41): near "endtask": syntax error, unexpected endtask.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(80): near "repeat": syntax error, unexpected repeat.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(6)
+# ** at alu_generator.sv(84): near "begin": syntax error, unexpected begin.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(5): near "gen2drv": syntax error, unexpected IDENTIFIER, expecting '\''.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(11): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(12): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(28): near "@": syntax error, unexpected '@'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(31): near "repeat": syntax error, unexpected repeat.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(34): near "@": syntax error, unexpected '@'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(7)
+# ** at alu_driver.sv(57): near "end": syntax error, unexpected end.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(5): near "mon2scb": syntax error, unexpected IDENTIFIER, expecting '\''.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(11): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(12): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(28): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(29): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(30): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(31): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(32): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(33): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(34): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(35): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(8)
+# ** at alu_monitor.sv(39): near "end": syntax error, unexpected end.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(3): near "mon2scb": syntax error, unexpected IDENTIFIER, expecting '\''.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(11): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(12): (vlog-2730) Undefined variable: 'pass_count'.
+# ** Error: ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(13): (vlog-2730) Undefined variable: 'fail_count'.
+# ** Error: ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(20): (vlog-2730) Undefined variable: 'ext5'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(27): near "begin": syntax error, unexpected begin.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(39): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(40): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(41): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(42): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(43): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(44): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(52): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(53): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(61): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(62): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(63): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(87): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(89): near "begin": syntax error, unexpected begin.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(92): near "end": syntax error, unexpected end.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(96): near "end": syntax error, unexpected end.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(9)
+# ** at alu_scoreboard.sv(114): near "endfunction": syntax error, unexpected endfunction.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(5): near "gen2drv": syntax error, unexpected IDENTIFIER, expecting '\''.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(6): near "mon2scb": syntax error, unexpected IDENTIFIER, expecting '\''.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(8): (vlog-2730) Undefined variable: 'alu_generator'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(9): (vlog-2730) Undefined variable: 'alu_driver'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(10): (vlog-2730) Undefined variable: 'alu_monitor'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(11): (vlog-2730) Undefined variable: 'alu_scoreboard'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(21): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(22): near "=": syntax error, unexpected '=', expecting ++ or --.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(24): (vlog-2730) Undefined variable: 'directed_count'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(25): (vlog-2730) Undefined variable: 'test_count'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(27): (vlog-2730) Undefined variable: 'gen2drv'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(28): (vlog-2730) Undefined variable: 'mon2scb'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(30): (vlog-2730) Undefined variable: 'gen'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(31): (vlog-2730) Undefined variable: 'drv'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(32): (vlog-2730) Undefined variable: 'mon'.
+# ** Error: ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(33): (vlog-2730) Undefined variable: 'scb'.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(42): near "fork": syntax error, unexpected fork.
+# ** Error: (vlog-13069) ** while parsing file included at alu_pkg.sv(10)
+# ** at alu_environment.sv(47): near "join": syntax error, unexpected join.
+# ** Error: alu.sv(29): (vlog-2730) Undefined variable: 'in_alu_en'.
+# ** Error: (vlog-13069) alu.sv(29): near "begin": syntax error, unexpected begin.
+# ** Error: (vlog-13069) alu.sv(35): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(36): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(37): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(38): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(39): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(40): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(47): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(48): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(55): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(56): near ":": syntax error, unexpected ':'.
+# ** Error: (vlog-13069) alu.sv(57): near ":": syntax error, unexpected ':'.
+# ** Error: tb_top.sv(9): (vlog-2730) Undefined variable: 'alu_if'.
+# ** Error: tb_top.sv(11): (vlog-2730) Undefined variable: 'alu_environment'.
+# ** Error: tb_top.sv(14): (vlog-2730) Undefined variable: 'alu'.
+# ** Error: (vlog-13069) tb_top.sv(52): near "end": syntax error, unexpected end.
+# End time: 20:52:00 on Jun 20,2026, Elapsed time: 0:00:01
+# Errors: 91, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./run.do line 19
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -sv +cover=bcesft alu_if.sv alu_pkg.sv alu.sv tb_top.sv"
+# Compile of alu.sv was successful.
+# Compile of alu_if.sv was successful.
+# Compile of alu_pkg.sv failed with 74 errors.
+# Compile of alu_transaction.sv was successful.
+# Compile of alu_pkg.sv was successful.
+do run.do
+# 
+# if {[file exists work]} {
+#     vdel -lib work -all
+# }
+# 
+# if {[file exists alu_coverage.ucdb]} {
+#     file delete alu_coverage.ucdb
+# }
+# 
+# if {[file exists alu_coverage_report.txt]} {
+#     file delete alu_coverage_report.txt
+# }
+# 
+# vlib work
+# vmap work work
+# QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
+# vmap work work 
+# Modifying E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf
+# 
+# vlog -sv +cover=bcesft alu_if.sv alu_pkg.sv alu.sv tb_top.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 20:56:16 on Jun 20,2026
+# vlog -reportprogress 300 -sv "+cover=bcesft" alu_if.sv alu_pkg.sv alu.sv tb_top.sv 
+# -- Compiling interface alu_if
+# -- Compiling package alu_pkg
+# -- Compiling module alu
+# -- Compiling module tb_top
+# -- Importing package alu_pkg
+# 
+# Top level modules:
+# 	tb_top
+# End time: 20:56:16 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -coverage -voptargs="+acc +cover=bcesft" work.tb_top
+# vsim -coverage -voptargs="+acc +cover=bcesft" work.tb_top 
+# Start time: 20:56:16 on Jun 20,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.alu_if(fast)
+# Loading work.alu_pkg(fast)
+# Loading work.tb_top(fast)
+# Loading work.alu_if(fast__2)
+# Loading work.alu(fast)
+# 
+# onfinish stop
+# coverage save -onexit alu_coverage.ucdb
+# run -all
+# =======================================
+# Starting ALU test
+# =======================================
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=10 actual=10
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=10 B=5 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=-4 B=6 ALU_en=1 a_en=1 a_op=3 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=-4 B=6 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=8 B=2 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=0 expected=10 actual=10
+# [SCB] PASS : A=8 B=2 ALU_en=1 a_en=1 a_op=6 b_en=0 b_op=0 expected=-11 actual=-11
+# [SCB] PASS : A=-16 B=0 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=-16 actual=-16
+# [SCB] PASS : A=0 B=-16 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=-16 actual=-16
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=0 expected=-4 actual=-4
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=1 expected=10 actual=10
+# [SCB] PASS : A=-5 B=4 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=2 expected=-1 actual=-1
+# [SCB] PASS : A=10 B=5 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=10 B=5 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=1 expected=-16 actual=-16
+# [SCB] PASS : A=-8 B=0 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=2 expected=-9 actual=-9
+# [SCB] PASS : A=0 B=-3 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=7 B=3 ALU_en=0 a_en=1 a_op=0 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=0 a_op=0 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=11 B=-16 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=0 expected=-1 actual=-1
+# [SCB] PASS : A=4 B=-11 ALU_en=1 a_en=0 a_op=2 b_en=1 b_op=1 expected=-7 actual=-7
+# [SCB] PASS : A=-5 B=-9 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=-1 B=1 ALU_en=1 a_en=0 a_op=3 b_en=1 b_op=0 expected=-2 actual=-2
+# [SCB] PASS : A=-10 B=4 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=3 expected=6 actual=6
+# [SCB] PASS : A=0 B=-9 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-4 B=-4 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=12 B=9 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=1 expected=-6 actual=-6
+# [SCB] PASS : A=1 B=1 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-6 B=-15 ALU_en=0 a_en=1 a_op=4 b_en=1 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=1 B=-11 ALU_en=0 a_en=0 a_op=4 b_en=1 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=6 B=-1 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=8 B=6 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=0 expected=2 actual=2
+# [SCB] PASS : A=6 B=12 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=3 expected=14 actual=14
+# [SCB] PASS : A=15 B=1 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=0 expected=14 actual=14
+# [SCB] PASS : A=-10 B=-6 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=11 B=-2 ALU_en=1 a_en=0 a_op=4 b_en=1 b_op=2 expected=9 actual=9
+# [SCB] PASS : A=-3 B=10 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=0 expected=-13 actual=-13
+# [SCB] PASS : A=0 B=-5 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=-1 actual=-1
+# [SCB] PASS : A=-5 B=-16 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=0 expected=11 actual=11
+# [SCB] PASS : A=-13 B=5 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=0 expected=-9 actual=-9
+# [SCB] PASS : A=-11 B=13 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=-13 B=-12 ALU_en=1 a_en=0 a_op=7 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=7 B=14 ALU_en=1 a_en=0 a_op=5 b_en=1 b_op=0 expected=-7 actual=-7
+# [SCB] PASS : A=11 B=15 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=10 actual=10
+# [SCB] PASS : A=-12 B=4 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=3 expected=6 actual=6
+# [SCB] PASS : A=5 B=-9 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=3 expected=-14 actual=-14
+# [SCB] PASS : A=0 B=7 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-15 B=9 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=-16 actual=-16
+# [SCB] PASS : A=-15 B=-15 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-15 B=13 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=1 B=-13 ALU_en=1 a_en=0 a_op=7 b_en=1 b_op=2 expected=-12 actual=-12
+# [SCB] PASS : A=-10 B=2 ALU_en=1 a_en=0 a_op=1 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=13 B=-10 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=0 expected=-5 actual=-5
+# [SCB] PASS : A=-9 B=5 ALU_en=1 a_en=0 a_op=6 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=13 B=-10 ALU_en=1 a_en=1 a_op=6 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=-6 B=13 ALU_en=0 a_en=1 a_op=1 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=12 B=-8 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=1 expected=11 actual=11
+# [SCB] PASS : A=-14 B=-10 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=1 expected=-24 actual=-24
+# [SCB] PASS : A=-10 B=-7 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=-8 B=-6 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=2 expected=-9 actual=-9
+# [SCB] PASS : A=2 B=1 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=0 expected=3 actual=3
+# [SCB] PASS : A=-5 B=-3 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=2 expected=-6 actual=-6
+# [SCB] PASS : A=-15 B=11 ALU_en=1 a_en=0 a_op=4 b_en=1 b_op=1 expected=-4 actual=-4
+# [SCB] PASS : A=15 B=-8 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=4 B=-8 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-10 B=13 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=5 B=9 ALU_en=1 a_en=0 a_op=7 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=2 B=-15 ALU_en=1 a_en=0 a_op=0 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=1 B=10 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=1 expected=-12 actual=-12
+# [SCB] PASS : A=-16 B=7 ALU_en=0 a_en=1 a_op=5 b_en=1 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-12 B=14 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=1 expected=4 actual=4
+# [SCB] PASS : A=-4 B=10 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=1 expected=9 actual=9
+# [SCB] PASS : A=-7 B=4 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=1 expected=2 actual=2
+# [SCB] PASS : A=9 B=-6 ALU_en=1 a_en=1 a_op=4 b_en=1 b_op=3 expected=-4 actual=-4
+# [SCB] PASS : A=-15 B=-11 ALU_en=1 a_en=0 a_op=1 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=11 B=-5 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=1 expected=15 actual=15
+# [SCB] PASS : A=0 B=6 ALU_en=1 a_en=0 a_op=0 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=-9 B=-13 ALU_en=1 a_en=0 a_op=7 b_en=1 b_op=1 expected=-22 actual=-22
+# [SCB] PASS : A=-1 B=0 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=3 expected=2 actual=2
+# [SCB] PASS : A=-1 B=-5 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=1 expected=-6 actual=-6
+# [SCB] PASS : A=-3 B=14 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=11 actual=11
+# [SCB] PASS : A=14 B=9 ALU_en=1 a_en=1 a_op=3 b_en=0 b_op=0 expected=8 actual=8
+# [SCB] PASS : A=-15 B=-1 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=1 expected=-16 actual=-16
+# [SCB] PASS : A=0 B=-12 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=0 expected=-12 actual=-12
+# [SCB] PASS : A=-16 B=7 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=-8 B=12 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=8 B=8 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=2 expected=7 actual=7
+# [SCB] PASS : A=15 B=2 ALU_en=1 a_en=0 a_op=1 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=4 B=0 ALU_en=1 a_en=0 a_op=2 b_en=1 b_op=1 expected=4 actual=4
+# [SCB] PASS : A=7 B=-12 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=2 expected=6 actual=6
+# [SCB] PASS : A=-11 B=-1 ALU_en=1 a_en=0 a_op=7 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=-12 B=13 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=3 expected=15 actual=15
+# [SCB] PASS : A=-1 B=-3 ALU_en=0 a_en=0 a_op=2 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=3 B=5 ALU_en=1 a_en=0 a_op=6 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=3 B=11 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=3 expected=14 actual=14
+# [SCB] PASS : A=-11 B=3 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=1 expected=-9 actual=-9
+# [SCB] PASS : A=7 B=-15 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-5 B=-15 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=3 expected=-5 actual=-5
+# [SCB] PASS : A=11 B=-10 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=2 expected=10 actual=10
+# [SCB] PASS : A=2 B=2 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=1 expected=-1 actual=-1
+# [SCB] PASS : A=-5 B=9 ALU_en=0 a_en=1 a_op=0 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-15 B=6 ALU_en=0 a_en=0 a_op=5 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=11 B=-11 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=0 expected=-2 actual=-2
+# [SCB] PASS : A=-5 B=-4 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=2 expected=-1 actual=-1
+# [SCB] PASS : A=-8 B=-3 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=2 B=-10 ALU_en=1 a_en=0 a_op=2 b_en=1 b_op=1 expected=-8 actual=-8
+# [SCB] PASS : A=13 B=4 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=3 expected=6 actual=6
+# [SCB] PASS : A=-10 B=-7 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=2 expected=-17 actual=-17
+# [SCB] PASS : A=-2 B=-11 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=-11 B=-6 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=-12 B=-16 ALU_en=1 a_en=0 a_op=3 b_en=1 b_op=2 expected=-28 actual=-28
+# [SCB] PASS : A=14 B=14 ALU_en=1 a_en=0 a_op=2 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=14 B=-5 ALU_en=1 a_en=0 a_op=6 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=8 B=15 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=1 expected=8 actual=8
+# [SCB] PASS : A=10 B=-12 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=15 B=-2 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=2 expected=14 actual=14
+# [SCB] PASS : A=-15 B=-12 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=1 expected=-6 actual=-6
+# [SCB] PASS : A=-13 B=-12 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=-14 actual=-14
+# [SCB] PASS : A=-2 B=5 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=0 expected=0 actual=0
+# =======================================
+# ALU SCOREBOARD REPORT
+# PASS  : 118
+# FAIL  : 0
+# TOTAL : 118
+# =======================================
+# =======================================
+# ALU test completed
+# =======================================
+# ** Note: $finish    : tb_top.sv(50)
+#    Time: 1225001 ps  Iteration: 1  Instance: /tb_top
+# Break in Module tb_top at tb_top.sv line 50
+# coverage save alu_coverage.ucdb
+# 
+vcover report alu_coverage.ucdb -details -output coverage_report.txt
+# QuestaSim-64 vcover 2021.1 Coverage Utility 2021.01 Jan 19 2021
+# Start time: 20:57:16 on Jun 20,2026
+# vcover report alu_coverage.ucdb -details -output coverage_report.txt 
+# End time: 20:57:16 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf).  File can not be renamed.
+# Saving coverage database on exit...
+# End time: 20:57:36 on Jun 20,2026, Elapsed time: 0:01:20
+# Errors: 3, Warnings: 10
+quit -sim
+do run.do
+# 
+# if {[file exists work]} {
+#     vdel -lib work -all
+# }
+# 
+# if {[file exists alu_coverage.ucdb]} {
+#     file delete alu_coverage.ucdb
+# }
+# 
+# if {[file exists alu_coverage_report.txt]} {
+#     file delete alu_coverage_report.txt
+# }
+# 
+# vlib work
+# vmap work work
+# QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
+# vmap work work 
+# Modifying E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf
+# 
+# vlog -sv +cover=bcesft alu_if.sv alu_pkg.sv alu.sv tb_top.sv
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 06:48:35 on Jun 21,2026
+# vlog -reportprogress 300 -sv "+cover=bcesft" alu_if.sv alu_pkg.sv alu.sv tb_top.sv 
+# -- Compiling interface alu_if
+# -- Compiling package alu_pkg
+# -- Compiling module alu
+# -- Compiling module tb_top
+# -- Importing package alu_pkg
+# 
+# Top level modules:
+# 	tb_top
+# End time: 06:48:36 on Jun 21,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -coverage -voptargs="+acc +cover=bcesft" work.tb_top
+# vsim -coverage -voptargs="+acc +cover=bcesft" work.tb_top 
+# Start time: 06:48:36 on Jun 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.alu_if(fast)
+# Loading work.alu_pkg(fast)
+# Loading work.tb_top(fast)
+# Loading work.alu_if(fast__2)
+# Loading work.alu(fast)
+# 
+# onfinish stop
+# coverage save -onexit alu_coverage.ucdb
+# run -all
+# =======================================
+# Starting ALU test
+# =======================================
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=10 actual=10
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=10 B=5 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=-4 B=6 ALU_en=1 a_en=1 a_op=3 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=-4 B=6 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=8 B=2 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=0 expected=10 actual=10
+# [SCB] PASS : A=8 B=2 ALU_en=1 a_en=1 a_op=6 b_en=0 b_op=0 expected=-11 actual=-11
+# [SCB] PASS : A=-16 B=0 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=-16 actual=-16
+# [SCB] PASS : A=0 B=-16 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=-16 actual=-16
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=0 expected=-4 actual=-4
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=1 expected=10 actual=10
+# [SCB] PASS : A=-5 B=4 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=2 expected=-1 actual=-1
+# [SCB] PASS : A=10 B=5 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=10 B=5 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=1 expected=-16 actual=-16
+# [SCB] PASS : A=-8 B=0 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=2 expected=-9 actual=-9
+# [SCB] PASS : A=0 B=-3 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=7 B=3 ALU_en=0 a_en=1 a_op=0 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=7 B=3 ALU_en=1 a_en=0 a_op=0 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=11 B=-16 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=0 expected=-1 actual=-1
+# [SCB] PASS : A=4 B=-11 ALU_en=1 a_en=0 a_op=2 b_en=1 b_op=1 expected=-7 actual=-7
+# [SCB] PASS : A=-5 B=-9 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=-1 B=1 ALU_en=1 a_en=0 a_op=3 b_en=1 b_op=0 expected=-2 actual=-2
+# [SCB] PASS : A=-10 B=4 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=3 expected=6 actual=6
+# [SCB] PASS : A=0 B=-9 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-4 B=-4 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=12 B=9 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=1 expected=-6 actual=-6
+# [SCB] PASS : A=1 B=1 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-6 B=-15 ALU_en=0 a_en=1 a_op=4 b_en=1 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=1 B=-11 ALU_en=0 a_en=0 a_op=4 b_en=1 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=6 B=-1 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=8 B=6 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=0 expected=2 actual=2
+# [SCB] PASS : A=6 B=12 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=3 expected=14 actual=14
+# [SCB] PASS : A=15 B=1 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=0 expected=14 actual=14
+# [SCB] PASS : A=-10 B=-6 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=11 B=-2 ALU_en=1 a_en=0 a_op=4 b_en=1 b_op=2 expected=9 actual=9
+# [SCB] PASS : A=-3 B=10 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=0 expected=-13 actual=-13
+# [SCB] PASS : A=0 B=-5 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=-1 actual=-1
+# [SCB] PASS : A=-5 B=-16 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=0 expected=11 actual=11
+# [SCB] PASS : A=-13 B=5 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=0 expected=-9 actual=-9
+# [SCB] PASS : A=-11 B=13 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=-13 B=-12 ALU_en=1 a_en=0 a_op=7 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=7 B=14 ALU_en=1 a_en=0 a_op=5 b_en=1 b_op=0 expected=-7 actual=-7
+# [SCB] PASS : A=11 B=15 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=10 actual=10
+# [SCB] PASS : A=-12 B=4 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=3 expected=6 actual=6
+# [SCB] PASS : A=5 B=-9 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=3 expected=-14 actual=-14
+# [SCB] PASS : A=0 B=7 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-15 B=9 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=-16 actual=-16
+# [SCB] PASS : A=-15 B=-15 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-15 B=13 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=1 B=-13 ALU_en=1 a_en=0 a_op=7 b_en=1 b_op=2 expected=-12 actual=-12
+# [SCB] PASS : A=-10 B=2 ALU_en=1 a_en=0 a_op=1 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=13 B=-10 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=0 expected=-5 actual=-5
+# [SCB] PASS : A=-9 B=5 ALU_en=1 a_en=0 a_op=6 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=13 B=-10 ALU_en=1 a_en=1 a_op=6 b_en=0 b_op=0 expected=4 actual=4
+# [SCB] PASS : A=-6 B=13 ALU_en=0 a_en=1 a_op=1 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=12 B=-8 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=1 expected=11 actual=11
+# [SCB] PASS : A=-14 B=-10 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=1 expected=-24 actual=-24
+# [SCB] PASS : A=-10 B=-7 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=-8 B=-6 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=2 expected=-9 actual=-9
+# [SCB] PASS : A=2 B=1 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=0 expected=3 actual=3
+# [SCB] PASS : A=-5 B=-3 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=2 expected=-6 actual=-6
+# [SCB] PASS : A=-15 B=11 ALU_en=1 a_en=0 a_op=4 b_en=1 b_op=1 expected=-4 actual=-4
+# [SCB] PASS : A=15 B=-8 ALU_en=1 a_en=0 a_op=3 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=4 B=-8 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-10 B=13 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=5 B=9 ALU_en=1 a_en=0 a_op=7 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=2 B=-15 ALU_en=1 a_en=0 a_op=0 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=1 B=10 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=1 expected=-12 actual=-12
+# [SCB] PASS : A=-16 B=7 ALU_en=0 a_en=1 a_op=5 b_en=1 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-12 B=14 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=1 expected=4 actual=4
+# [SCB] PASS : A=-4 B=10 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=1 expected=9 actual=9
+# [SCB] PASS : A=-7 B=4 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=1 expected=2 actual=2
+# [SCB] PASS : A=9 B=-6 ALU_en=1 a_en=1 a_op=4 b_en=1 b_op=3 expected=-4 actual=-4
+# [SCB] PASS : A=-15 B=-11 ALU_en=1 a_en=0 a_op=1 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=11 B=-5 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=1 expected=15 actual=15
+# [SCB] PASS : A=0 B=6 ALU_en=1 a_en=0 a_op=0 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=-9 B=-13 ALU_en=1 a_en=0 a_op=7 b_en=1 b_op=1 expected=-22 actual=-22
+# [SCB] PASS : A=-1 B=0 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=3 expected=2 actual=2
+# [SCB] PASS : A=-1 B=-5 ALU_en=1 a_en=0 a_op=0 b_en=1 b_op=1 expected=-6 actual=-6
+# [SCB] PASS : A=-3 B=14 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=0 expected=11 actual=11
+# [SCB] PASS : A=14 B=9 ALU_en=1 a_en=1 a_op=3 b_en=0 b_op=0 expected=8 actual=8
+# [SCB] PASS : A=-15 B=-1 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=1 expected=-16 actual=-16
+# [SCB] PASS : A=0 B=-12 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=0 expected=-12 actual=-12
+# [SCB] PASS : A=-16 B=7 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=-8 B=12 ALU_en=1 a_en=0 a_op=4 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=8 B=8 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=2 expected=7 actual=7
+# [SCB] PASS : A=15 B=2 ALU_en=1 a_en=0 a_op=1 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=4 B=0 ALU_en=1 a_en=0 a_op=2 b_en=1 b_op=1 expected=4 actual=4
+# [SCB] PASS : A=7 B=-12 ALU_en=1 a_en=1 a_op=3 b_en=1 b_op=2 expected=6 actual=6
+# [SCB] PASS : A=-11 B=-1 ALU_en=1 a_en=0 a_op=7 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=-12 B=13 ALU_en=1 a_en=1 a_op=7 b_en=1 b_op=3 expected=15 actual=15
+# [SCB] PASS : A=-1 B=-3 ALU_en=0 a_en=0 a_op=2 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=3 B=5 ALU_en=1 a_en=0 a_op=6 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=3 B=11 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=3 expected=14 actual=14
+# [SCB] PASS : A=-11 B=3 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=1 expected=-9 actual=-9
+# [SCB] PASS : A=7 B=-15 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=-5 B=-15 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=3 expected=-5 actual=-5
+# [SCB] PASS : A=11 B=-10 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=2 expected=10 actual=10
+# [SCB] PASS : A=2 B=2 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=1 expected=-1 actual=-1
+# [SCB] PASS : A=-5 B=9 ALU_en=0 a_en=1 a_op=0 b_en=0 b_op=1 expected=0 actual=0
+# [SCB] PASS : A=-15 B=6 ALU_en=0 a_en=0 a_op=5 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=11 B=-11 ALU_en=1 a_en=0 a_op=1 b_en=1 b_op=0 expected=-2 actual=-2
+# [SCB] PASS : A=-5 B=-4 ALU_en=1 a_en=1 a_op=1 b_en=0 b_op=2 expected=-1 actual=-1
+# [SCB] PASS : A=-8 B=-3 ALU_en=1 a_en=1 a_op=0 b_en=1 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=2 B=-10 ALU_en=1 a_en=0 a_op=2 b_en=1 b_op=1 expected=-8 actual=-8
+# [SCB] PASS : A=13 B=4 ALU_en=1 a_en=1 a_op=1 b_en=1 b_op=3 expected=6 actual=6
+# [SCB] PASS : A=-10 B=-7 ALU_en=1 a_en=1 a_op=0 b_en=0 b_op=2 expected=-17 actual=-17
+# [SCB] PASS : A=-2 B=-11 ALU_en=1 a_en=1 a_op=5 b_en=0 b_op=3 expected=-1 actual=-1
+# [SCB] PASS : A=-11 B=-6 ALU_en=1 a_en=1 a_op=2 b_en=0 b_op=0 expected=15 actual=15
+# [SCB] PASS : A=-12 B=-16 ALU_en=1 a_en=0 a_op=3 b_en=1 b_op=2 expected=-28 actual=-28
+# [SCB] PASS : A=14 B=14 ALU_en=1 a_en=0 a_op=2 b_en=0 b_op=2 expected=0 actual=0
+# [SCB] PASS : A=14 B=-5 ALU_en=1 a_en=0 a_op=6 b_en=0 b_op=0 expected=0 actual=0
+# [SCB] PASS : A=8 B=15 ALU_en=1 a_en=1 a_op=4 b_en=0 b_op=1 expected=8 actual=8
+# [SCB] PASS : A=10 B=-12 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=3 expected=0 actual=0
+# [SCB] PASS : A=15 B=-2 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=2 expected=14 actual=14
+# [SCB] PASS : A=-15 B=-12 ALU_en=1 a_en=1 a_op=5 b_en=1 b_op=1 expected=-6 actual=-6
+# [SCB] PASS : A=-13 B=-12 ALU_en=1 a_en=1 a_op=6 b_en=1 b_op=2 expected=-14 actual=-14
+# [SCB] PASS : A=-2 B=5 ALU_en=1 a_en=0 a_op=5 b_en=0 b_op=0 expected=0 actual=0
+# =======================================
+# ALU SCOREBOARD REPORT
+# PASS  : 118
+# FAIL  : 0
+# TOTAL : 118
+# =======================================
+# =======================================
+# ALU test completed
+# =======================================
+# ** Note: $finish    : tb_top.sv(65)
+#    Time: 1225001 ps  Iteration: 1  Instance: /tb_top
+# Break in Module tb_top at tb_top.sv line 65
+# coverage save alu_coverage.ucdb
+# 
+quit -sim
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf).  File can not be renamed.
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (E:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU/ALU_Final.mpf).  File can not be renamed.
+# Saving coverage database on exit...
+# End time: 06:48:50 on Jun 21,2026, Elapsed time: 0:00:14
+# Errors: 2, Warnings: 2

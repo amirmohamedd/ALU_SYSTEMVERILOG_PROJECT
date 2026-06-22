@@ -1,0 +1,139 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Courses/Digital/Digital Verification  SI-Vision Academy/Projects/The Final ALU
+T_opt
+!s11d Final ALU/work 0 
+!s11d SI-Vision Academy/Projects/The 0 
+!s11d E:/Courses/Digital/Digital Verification 0 
+!s11d alu_if 1 0 
+!s11d ALU/work 1 0 
+!s11d Academy/Projects/The Final 0 
+!s11d Verification SI-Vision 0 
+!s11d alu_pkg E:/Courses/Digital/Digital 0 
+!s110 1782013718
+V?OmB[@L_K?0ef^KF?GN>G2
+04 6 4 work tb_top fast 0
+=1-54bf64159365-6a375f15-358-4fa8
+Z1 !s102 +cover=bcesft
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc +cover=bcesft
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+valu
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1782013716
+!i10b 1
+!s100 jKi9ZOIUOa_P[@dQ2THWe0
+Icc94UO^lf^KedY[g=IQL`0
+S1
+R0
+w1781983659
+8alu.sv
+Falu.sv
+!i122 0
+L0 4 117
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z7 !s108 1782013715.000000
+Z8 !s107 alu_environment.sv|alu_scoreboard.sv|alu_monitor.sv|alu_driver.sv|alu_generator.sv|alu_transaction.sv|tb_top.sv|alu.sv|alu_pkg.sv|alu_if.sv|
+Z9 !s90 -reportprogress|300|-sv|+cover=bcesft|alu_if.sv|alu_pkg.sv|alu.sv|tb_top.sv|
+!i113 0
+R1
+Z10 o-sv +cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Yalu_if
+R3
+R4
+!i10b 1
+!s100 kFZVJ0Q83TQR1`ZOMYZB61
+INhFK?0Q_Lj8k;[SL_<GL@0
+S1
+R0
+w1781997666
+8alu_if.sv
+Falu_if.sv
+!i122 0
+L0 3 0
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R1
+R10
+R2
+Xalu_pkg
+!s115 alu_if
+R3
+R4
+!i10b 1
+!s100 _i=]O3PaPMB`njJzcnfN@3
+ICK:V42n^RW[L7^IKo1ikI0
+S1
+R0
+w1782013426
+8alu_pkg.sv
+Falu_pkg.sv
+Falu_transaction.sv
+Falu_generator.sv
+Falu_driver.sv
+Falu_monitor.sv
+Falu_scoreboard.sv
+Falu_environment.sv
+!i122 0
+L0 4 0
+VCK:V42n^RW[L7^IKo1ikI0
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R1
+R10
+R2
+vtb_top
+R3
+DXx4 work 7 alu_pkg 0 22 CK:V42n^RW[L7^IKo1ikI0
+R4
+!i10b 1
+!s100 XoGR<iOmeZ[g1D@2O>6<E0
+IMg_QjVFR]5@B>;zEk<oQY1
+S1
+R0
+w1782013268
+8tb_top.sv
+Ftb_top.sv
+!i122 0
+L0 3 67
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R1
+R10
+R2
